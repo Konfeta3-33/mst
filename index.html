@@ -61,19 +61,27 @@
 
 <section class="contact">
     <div class="container">
-        <h2>Our Features</h2>
-        <div class="feature-list">
-            <div class="feature-item">Feature 1</div>
-            <div class="feature-item">Feature 2</div>
-            <div class="feature-item">Feature 3</div>
+        <div class="contact-form">
+            <div class="contact-form-fields">
+                <h2 class="contact-title">Оставьте заявку и мы свяжемся с вами</h2>
+
+                <form id="consultation-form" action="#" method="POST">
+                    <input type="text" name="name" class="contact-input" placeholder="Name" required>
+                    <input type="email" name="email" class="contact-input" placeholder="E-mail" required>
+
+                    <label class="contact-checkbox">
+                        <input type="checkbox" name="privacy" required>
+                        <span class="contact-policy">Я принимаю <a href="#">Политику конфиденциальности</a></span>
+                    </label>
+
+                    <button type="submit" class="button button-full button-black">Отправить заявку</button>
+                </form>
+            </div>
+            <div class="contact-images">
+                <div class="contact-images-all"></div>
+            </div>
         </div>
     </div>
-</section>
-
-<section>
-    <form id="consultation-form">
-        <!-- Поля формы -->
-    </form>
 </section>
 
 <footer class="footer">
