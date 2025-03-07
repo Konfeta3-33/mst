@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Arial', sens-serif;
     background: #f5f5f5;
@@ -156,7 +160,7 @@ body {
     color: #EFCFAD;
 }
 
-.order-btn {
+.button {
     width: 445px;
     display: inline-block;
     padding: 30px 50px;
@@ -166,59 +170,75 @@ body {
     color: #222222;
     background-color: #fff;
     border: none;
-    border-radius: 8px; /* Скругление углов */
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
 }
 
-.order-btn:hover {
+.button:hover {
     background-color: #f0f0f0;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
-.order-btn:active {
-    transform: scale(0.95);
+.button:active {
+    transform: scale(0.98);
 }
 
-.btn {
-    margin-top: 20px;
-    padding: 12px 24px;
-    font-size: 18px;
-    background: #ffcc00;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.2s;
+.features {
+    display: flex;
+    min-height: 720px;
+    padding: 100px 0 0;
+    background: #282829;
 }
 
-.btn:hover {
-    background: #e6b800;
-    transform: scale(1.05);
+.feature-item {
+    flex: 1;
 }
 
-/*.btn {*/
-/*    background: #007bff;*/
-/*    color: white;*/
-/*    border: none;*/
-/*    padding: 10px 20px;*/
-/*    cursor: pointer;*/
-/*    transition: background 0.3s;*/
-/*}*/
+.feature-left {
+    height: auto;
+    background: url('../assets/images/3 1.png') center/cover no-repeat;
+}
 
-/*.btn:hover {*/
-/*    background: #0056b3;*/
-/*}*/
+.feature-right {
+    height: auto;
+    background: url('../assets/images/1 9.png') center/cover no-repeat;
+}
 
-/*.feature-item {*/
-/*    opacity: 0;*/
-/*    transform: translateY(20px);*/
-/*    transition: all 0.6s ease-out;*/
-/*}*/
+.feature-center {
+    flex: 1.5;
+    padding: 50px 50px 0;
+    color: white;
+}
 
-/*.feature-item.fade-in {*/
-/*    opacity: 1;*/
-/*    transform: translateY(0);*/
-/*}*/
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.feature-list li {
+    position: relative;
+    font-size: 24px;
+    padding-left: 68px;
+    margin-bottom: 40px;
+}
+
+.feature-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    background: url('../assets/images/flower.png') no-repeat center/contain;
+}
+
+.button-full {
+    width: 100%;
+}
 
 @media (max-width: 1200px) {
     .container {
