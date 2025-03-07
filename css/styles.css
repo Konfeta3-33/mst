@@ -34,19 +34,6 @@ body {
     overflow: auto;
 }
 
-.block1 {
-    width: 60%;
-    padding: 0 0 50px 160px;
-    display: flex;
-    flex-direction: column;
-}
-
-.block2 {
-    width: 40%;
-    height: auto;
-    background: url("../assets/images/2 2.png") center/cover no-repeat;
-}
-
 .header {
     font-family: 'Prata', serif;
     position: fixed;
@@ -65,7 +52,9 @@ body {
     z-index: 10;
 }
 
-.header .logo {
+.logo {
+    text-transform: uppercase;
+    font-family: 'Prata', Serif;
     font-size: 36px;
     font-weight: bold;
     margin-right: 250px;
@@ -89,8 +78,6 @@ body {
 
 .header .nav-list li:not(:last-child) {
     margin-right: 15px;
-    font-size: 16px;
-    gap: 30px;
 }
 
 .header .nav-list a {
@@ -101,6 +88,19 @@ body {
 
 .header .nav-list a:hover {
     color: #ffd700;
+}
+
+.block1 {
+    width: 60%;
+    padding: 0 0 50px 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+.block2 {
+    width: 40%;
+    height: auto;
+    background: url("../assets/images/2 2.png") center/cover no-repeat;
 }
 
 .price {
@@ -161,7 +161,7 @@ body {
 }
 
 .button {
-    width: 445px;
+    width: fit-content;
     display: inline-block;
     padding: 30px 50px;
     font-size: 23px;
@@ -245,6 +245,7 @@ body {
 .contact {
     padding: 100px 0;
     background-color: #282829;
+    border-bottom: 2px solid #D5C9BE;
 }
 
 .contact-form {
@@ -342,6 +343,73 @@ form input[type="email"] {
     top: -40px;
     left: -100px;
     clip-path: inset(0 0 50px 0);
+}
+
+.footer {
+    background-color: #222222;
+}
+
+.footer-nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 40px 0;
+    border-bottom: 2px solid #D5C9BE;
+}
+
+.footer-nav-list li:not(:last-child) {
+    margin-right: 60px;
+}
+
+.footer-nav-list a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-copy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 45px 0 60px;
+}
+
+.footer-copy-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.footer-copy-column:first-child p {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.footer-copy-column:nth-child(2) {
+    align-items: center;
+}
+
+.footer-copy-column:last-child {
+    align-items: end;
+}
+
+.footer-copy-social svg:not(:last-child) {
+    margin-right: 32px;
+}
+
+.footer-copy-links {
+    color: #D5C9BE;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.button-footer {
+    margin-bottom: 35px;
 }
 
 @media (max-width: 1200px) {
