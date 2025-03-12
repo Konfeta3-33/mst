@@ -185,7 +185,7 @@ body {
 
 .features {
     display: flex;
-    min-height: 45rem; /*TODO: check size - height, maybe to do Auto*/
+    min-height: 45rem;
     padding: 6.25rem 0 0;
     background: #282829;
 }
@@ -261,6 +261,10 @@ body {
     width: 60%;
     height: 100%;
     padding: clamp(20px, 3.646vw, 70px) clamp(20px, 6.771vw, 130px);
+}
+
+.contact-form-fields h2 {
+    font-weight: normal;
 }
 
 .contact-title {
@@ -482,7 +486,7 @@ form input[type="email"] {
     }
 
     .contact-images-all::after {
-        width: 112%;
+        width: 108%;
         height: 118%;
     }
 
@@ -534,6 +538,7 @@ form input[type="email"] {
 
     .features {
         padding: 4.25rem 0 0;
+        min-height: auto;
     }
 
     .feature-list li {
@@ -570,7 +575,7 @@ form input[type="email"] {
 
     .contact-images-all::after {
         width: 115%;
-        height: 120%;
+        height: 121%;
     }
 
     .footer-copy-links, .footer-nav-list,
@@ -590,57 +595,123 @@ form input[type="email"] {
 @media (max-width: 1024px) {
     .header {
         height: 4.5rem;
-        padding: 0 clamp(20px, 5.33vw, 160px);
+        padding: 0 clamp(20px, 6.33vw, 160px);
     }
 
     .block-left {
-        padding: 0 0 clamp(20px, 2.604vw, 50px) clamp(20px, 5.33vw, 160px);
+        padding: 0 0 clamp(20px, 2.604vw, 50px) clamp(20px, 6.33vw, 160px);
     }
 
     .logo {
-        font-size: 1.9rem;
-        margin-right: 4vw;
+        font-size: 1.5rem;
+        margin-right: 8vw;
     }
 
     .nav-list {
         font-size: 0.9rem;
     }
+
+    .nav-list li {
+        font-size: 0.8rem;
+    }
+
+    .price-title {
+        font-size: 2.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .price {
+        margin-top: 14rem;
+    }
+
+    .price-desc {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .advantages li {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 2.1rem;
+    }
+
+    .advantages li::before {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .button {
+        padding: 1.25rem 2rem;
+        font-size: 1rem;
+    }
+
+    .features {
+        padding: 4rem 0 0;
+        min-height: auto;
+    }
+
+    .feature-list li {
+        font-size: 1.1rem;
+        margin-bottom: 1.3rem;
+        padding-bottom: 1.3rem;
+    }
+
+    .feature-list li::before {
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+
+    .contact {
+        padding: 4rem 0;
+    }
+
+    .container {
+        margin: 0px 6.33vw;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    form input {
+        padding: 0.8rem 1.3rem;
+        font-size: 1.1rem;
+    }
+
+    .contact-checkbox input {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.7rem;
+    }
+
+    .contact-images-all::after {
+        width: 117%;
+        height: 123%;
+    }
+
+    .contact-policy, .footer-copy-links,
+    .footer-nav-list, .footer-copy-column:first-child p {
+        font-size: 0.8rem;
+    }
+
+    .footer-copy {
+        padding: 2rem 0;
+    }
+
+    .footer-nav-list li:not(:last-child) {
+        margin-right: 2.75rem;
+    }
+
+    .footer-copy-social svg:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    .footer-copy-social svg {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .button-footer {
+        margin-bottom: 2rem;
+    }
 }
-
-/*@media (max-width: 768px) {*/
-/*    .header {*/
-/*        flex-direction: column;*/
-/*        height: auto;*/
-/*        padding: 10px 20px;*/
-/*    }*/
-
-/*    .hero {*/
-/*        height: 800px;*/
-/*    }*/
-
-/*    .hero h1 {*/
-/*        font-size: 32px;*/
-/*    }*/
-
-/*    .nav ul {*/
-/*        flex-direction: column;*/
-/*        align-items: center;*/
-/*        gap: 15px;*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 480px) {*/
-/*    .hero {*/
-/*        height: 700px;*/
-/*        padding: 20px;*/
-/*    }*/
-
-/*    .hero h1 {*/
-/*        font-size: 28px;*/
-/*    }*/
-
-/*    .btn {*/
-/*        font-size: 16px;*/
-/*        padding: 10px 20px;*/
-/*    }*/
-/*}*/
