@@ -28,6 +28,54 @@ body {
     height: 100%;
 }
 
+.burger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.burger.cross span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.burger.cross span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.cross span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease;
+    z-index: 1000;
+}
+
 .hero {
     display: flex;
     background-color: #222222;
@@ -71,7 +119,6 @@ body {
 
 .header .nav-list {
     display: flex;
-    list-style: none;
     font-size: 1rem;
     font-style: italic;
 }
@@ -92,6 +139,7 @@ body {
 
 .block-left {
     width: 60%;
+    list-style: none;
     padding: 0 0 clamp(20px, 2.604vw, 50px) clamp(20px, 8.33vw, 160px);
     display: flex;
     flex-direction: column;
@@ -422,6 +470,10 @@ form input[type="email"] {
         height: 6.5rem;
     }
 
+    .burger {
+        display: none;
+    }
+
     .price {
         margin-top: 16rem;
     }
@@ -501,12 +553,12 @@ form input[type="email"] {
 }
 
 @media (max-width: 1200px) {
-    .container {
-        margin: 0 7.33vw;
-    }
-
     .header {
         height: 4.5rem;
+    }
+
+    .burger {
+        display: none;
     }
 
     .logo {
@@ -583,6 +635,11 @@ form input[type="email"] {
         font-size: 1rem;
     }
 
+    .footer-copy-social svg {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
     .footer-copy-social svg:not(:last-child) {
         margin-right: 1.5rem;
     }
@@ -596,6 +653,10 @@ form input[type="email"] {
     .header {
         height: 4.5rem;
         padding: 0 clamp(20px, 6.33vw, 160px);
+    }
+
+    .burger {
+        display: none;
     }
 
     .block-left {
@@ -707,11 +768,122 @@ form input[type="email"] {
     }
 
     .footer-copy-social svg {
-        width: 1.75rem;
-        height: 1.75rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .button-footer {
         margin-bottom: 2rem;
     }
+
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        padding: 3.125rem 2rem;
+        display: flex;
+        flex-direction: column;
+        z-index: 1100;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
+        transition: opacity 0.3s ease, visibility 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+
+    .open {
+        left: 0;
+    }
+
+    .overlay {
+        height: 100vh;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        list-style-type: none;
+    }
+
+    .menu li::marker {
+        content: none;
+    }
+
+    .show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header .nav-list {
+        flex-direction: column;
+    }
+
+    .header .nav-list li {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .block-right {
+        display: none;
+    }
+
+    .block-left {
+        position: relative;
+        width: 100%;
+        background: url("../assets/images/2 2.png") center/cover no-repeat;
+    }
+
+    .block-left::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .price {
+        z-index: 1;
+    }
+
+    .button {
+        z-index: 1;
+    }
+
+    .feature-left {
+        display: none;
+    }
+
+    .feature-center, .feature-right {
+        width: 50%;
+    }
+
+    .contact-form-fields {
+        width: 100%;
+    }
+
+    .contact-images {
+        display: none;
+    }
+
+    .footer-copy-social svg:not(:last-child) {
+        margin-right: 0.7rem;
+    }
+
 }

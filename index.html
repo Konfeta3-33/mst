@@ -8,14 +8,22 @@
 </head>
 <body>
 
-<section class="hero">
+<section id="about" class="hero">
     <header class="header">
         <h1 class="logo">Novex</h1>
-        <nav>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+
+        <nav class="menu" id="menu">
             <ul class="nav-list">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Our advantages</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#services">Our advantages</a></li>
+                <li><a href="#consultation-form">Contacts</a></li>
             </ul>
         </nav>
     </header>
@@ -36,7 +44,7 @@
     <div class="block-right"></div>
 </section>
 
-<section class="features">
+<section id="services" class="features">
     <div class="feature-item feature-left"></div>
     <div class="feature-item feature-center">
         <ul class="feature-list">
@@ -48,7 +56,8 @@
             <li>We guarantee high quality and professionalism, backed by years of experience<span class="hide-on"> and positive feedback from satisfied clients.
                 Our team consists only of certified specialists</span>.
             </li>
-            <li>Support and guidance at all stages — from the first consultation to achieving full results<span class="hide-on">,
+            <li>Support and guidance at all stages — from the first consultation to achieving full results<span
+                    class="hide-on">,
                 we stay with you, answer questions, and help solve any arising issues</span>.
             </li>
         </ul>
@@ -58,13 +67,13 @@
     <div class="feature-item feature-right"></div>
 </section>
 
-<section class="contact">
+<section id="consultation-form" class="contact">
     <div class="container">
         <div class="contact-form">
             <div class="contact-form-fields">
                 <h2 class="contact-title">Leave a request and we will contact you</h2>
 
-                <form id="consultation-form" action="#" method="POST">
+                <form action="#" method="POST">
                     <input type="text" name="name" class="contact-input" placeholder="Name" required>
                     <input type="email" name="email" class="contact-input" placeholder="E-mail" required>
 
