@@ -22,6 +22,10 @@ body {
     color: #fff;
 }
 
+ul {
+    list-style: none;
+}
+
 .container {
     max-width: 1920px;
     margin: 0 clamp(20px, 8.33vw, 160px); /*TODO: check the size for another media query*/
@@ -124,7 +128,7 @@ body {
 }
 
 .header .nav-list li:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 1.875rem;
 }
 
 .header .nav-list a {
@@ -465,6 +469,10 @@ form input[type="email"] {
     margin-bottom: 2.1875rem;
 }
 
+.footer-terms {
+    display: none;
+}
+
 @media (max-width: 1600px) {
     .header {
         height: 6.5rem;
@@ -798,14 +806,6 @@ form input[type="email"] {
         transition: opacity 0.3s ease, visibility 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease;
     }
 
-    .open {
-        left: 0;
-    }
-
-    .overlay {
-        height: 100vh;
-    }
-
     .menu ul {
         list-style: none;
         padding: 0;
@@ -818,6 +818,14 @@ form input[type="email"] {
 
     .menu li::marker {
         content: none;
+    }
+
+    .open {
+        left: 0;
+    }
+
+    .overlay {
+        height: 100vh;
     }
 
     .show {
@@ -885,5 +893,82 @@ form input[type="email"] {
     .footer-copy-social svg:not(:last-child) {
         margin-right: 0.7rem;
     }
+}
 
+@media (max-width: 480px) {
+    .feature-right {
+        display: none;
+    }
+
+    .features {
+        padding: 2rem 0 0;
+    }
+
+    .footer-copy-column:last-child {
+        display: none;
+    }
+
+    .footer-copy-column:first-child {
+        width: 42%;
+        flex: unset;
+    }
+
+    .footer-copy-social {
+        margin-bottom: 1rem;
+    }
+
+    .footer-copy-social svg:not(:last-child) {
+        margin-right: 0.5rem;
+    }
+
+    .footer-copy-column:nth-child(2) {
+        align-items: end;
+    }
+
+    .footer-copy-policy {
+        display: flex;
+    }
+
+    .footer-terms {
+        display: block;
+    }
+
+    .footer-policy {
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer-nav-list {
+        padding: 1.5rem 0;
+    }
+
+    .footer-nav-list li:not(:last-child) {
+        margin-right: 1.3rem;
+    }
+
+    .footer-copy-column h1 {
+        margin-bottom: 1rem;
+    }
+
+    .footer-copy-social {
+        display: none;
+    }
+
+    .footer-copy-policy {
+        flex-direction: column;
+    }
+
+    .footer-policy {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .footer-copy-column:first-child {
+        width: 60%;
+    }
+
+    .footer-copy-column:nth-child(2) {
+        justify-content: end;
+    }
 }
