@@ -1,3 +1,19 @@
+:root {
+    --font-main: 'Arial', sans-serif;
+    --font-accent: 'Prata', serif;
+
+    --color-bg: #f5f5f5;
+    --color-white: #fff;
+    --color-black: #222222;
+    --color-accent: #D5C9BE;
+    --color-highlight: #EFCFAD;
+    --color-button-hover: #f0f0f0;
+    --color-border: #D6D6D6;
+
+    --spacing-container: clamp(20px, 8.33vw, 160px);
+}
+
+
 @font-face {
     font-family: 'Prata';
     src: url('../assets/fonts/Prata-Regular.ttf') format('ttf');
@@ -17,9 +33,9 @@ html {
 }
 
 body {
-    font-family: 'Arial', sens-serif;
-    background: #f5f5f5;
-    color: #fff;
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-white);
 }
 
 ul {
@@ -28,7 +44,7 @@ ul {
 
 .container {
     max-width: 1920px;
-    margin: 0 clamp(20px, 8.33vw, 160px); /*TODO: check the size for another media query*/
+    margin: 0 var(--spacing-container);
     height: 100%;
 }
 
@@ -49,7 +65,7 @@ ul {
     display: block;
     width: 100%;
     height: 3px;
-    background: #ffffff;
+    background-color: var(--color-white);
     border-radius: 5px;
     transition: 0.3s;
 }
@@ -82,13 +98,13 @@ ul {
 
 .hero {
     display: flex;
-    background-color: #222222;
+    background-color: var(--color-black);
     min-height: 100vh;
     overflow: auto;
 }
 
 .header {
-    font-family: 'Prata', serif;
+    font-family: var(--font-accent);
     position: fixed;
     left: 0;
     width: calc(100% - 10rem);
@@ -97,16 +113,16 @@ ul {
     align-items: center;
     justify-content: flex-start;
     transition: background 0.3s, top 0.3s, backdrop-filter 0.3s;
-    color: #ffffff;
+    color: var(--color-white);
     text-transform: uppercase;
     background: transparent;
-    padding: 0 clamp(20px, 8.33vw, 160px); /*160px*/
+    padding: 0 var(--spacing-container);
     z-index: 10;
 }
 
 .logo {
     text-transform: uppercase;
-    font-family: 'Prata', Serif;
+    font-family: var(--font-accent);
     font-size: 2.25rem;
     font-weight: bold;
     margin-right: clamp(20px, 13.021vw, 250px);
@@ -138,7 +154,7 @@ ul {
 }
 
 .header .nav-list a:hover {
-    color: #D5C9BE;
+    color: var(--color-accent);
 }
 
 .block-left {
@@ -161,7 +177,7 @@ ul {
 }
 
 .price-title {
-    font-family: 'Prata', serif;
+    font-family: var(--font-accent);
     font-size: 5rem;
     font-weight: normal;
     margin-bottom: 3.125rem;
@@ -203,10 +219,10 @@ ul {
 }
 
 .highlight {
-    font-family: 'Prata', Serif;
+    font-family: var(--font-accent);
     font-size: 1.75rem;
     font-weight: bold;
-    color: #EFCFAD;
+    color: var(--color-highlight);
 }
 
 .button {
@@ -216,8 +232,8 @@ ul {
     font-size: 1.4375rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #222222;
-    background-color: #fff;
+    color: var(--color-black);
+    background-color: var(--color-white);
     border: none;
     border-radius: 8px;
     text-decoration: none;
@@ -227,7 +243,7 @@ ul {
 }
 
 .button:hover {
-    background-color: #f0f0f0;
+    background-color: var(--color-button-hover);
     transform: scale(1.02);
 }
 
@@ -297,13 +313,13 @@ ul {
 .contact {
     padding: clamp(20px, 6.25rem, 100px) 0;
     background-color: #282829;
-    border-bottom: 2px solid #D5C9BE;
+    border-bottom: 2px solid var(--color-accent);
 }
 
 .contact-form {
     display: flex;
     height: auto;
-    background: #ffffff;
+    background-color: var(--color-white);
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6), 0 -4px 10px rgba(255, 255, 255, 0.1);
     outline: 1px solid rgba(255, 255, 255, 0.2);
@@ -320,7 +336,7 @@ ul {
 }
 
 .contact-title {
-    font-family: 'Prata', Serif;
+    font-family: var(--font-accent);
     font-size: 3.375rem;
     color: #38535D;
     margin-bottom: clamp(20px, 2.344vw, 45px);
@@ -330,7 +346,7 @@ form input {
     display: flex;
     flex-direction: column;
     padding: 0.9375rem 2.1875rem;
-    border: 1px solid #D6D6D6;
+    border: 1px solid var(--color-border);
     border-radius: 5px;
     font-size: 1.5rem;
     color: #55565A;
@@ -368,7 +384,7 @@ form input[type="email"] {
 
 .button-black {
     background-color: #282829;
-    color: #ffffff;
+    color: var(--color-white);
     font-size: 1.5rem;
 }
 
@@ -403,7 +419,7 @@ form input[type="email"] {
 }
 
 .footer {
-    background-color: #222222;
+    background-color: var(--color-black);
 }
 
 .footer-nav-list {
@@ -413,9 +429,9 @@ form input[type="email"] {
     text-transform: uppercase;
     font-style: italic;
     font-size: 1.25rem;
-    color: #ffffff;
+    color: var(--color-white);
     padding: 2.5rem 0;
-    border-bottom: 2px solid #D5C9BE;
+    border-bottom: 2px solid var(--color-accent);
 }
 
 .footer-nav-list li:not(:last-child) {
@@ -443,7 +459,7 @@ form input[type="email"] {
 }
 
 .footer-copy-column:first-child p {
-    color: #ffffff;
+    color: var(--color-white);
     font-size: 1.25rem;
 }
 
@@ -460,7 +476,7 @@ form input[type="email"] {
 }
 
 .footer-copy-links {
-    color: #D5C9BE;
+    color: var(--color-accent);
     text-decoration: none;
     font-size: 1.25rem;
 }
